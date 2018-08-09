@@ -11,7 +11,7 @@ Syntax: `Jo.operation( data [, params] )` where `data` is a JSON object and the 
 Suppose the originating Jolie service has an operation `greet` that returns a string given a tree with subnode `name`, as follows.
 (Nanoservices are great for examples, not so much in production: do this at home!)
 
-```jolie
+```Jolie
 greet( request )( response ) {
 	response = "Hello " + request.name
 }
