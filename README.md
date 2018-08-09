@@ -44,7 +44,7 @@ Jo.greet( { name: "Homer" } )
 
 ## Redirections
 
-Jo supports [redirection](https://jolielang.gitbook.io/docs/architectural-composition/redirection), the Jolie primitive to build API gateways.
+Jo supports [redirection](https://jolielang.gitbook.io/docs/architectural-composition/redirection), the Jolie primitive to build API gateways with named subservices. (Unnamed subservices in the gateway, obtained by aggregation, are available as normal operations, so they can be called with the previous syntax.)
 
 Suppose that the originating Jolie service has a redirection table as follows.
 ```jolie
