@@ -11,7 +11,7 @@ Syntax: `Jo.operation( data [, params] )` where `data` is a JSON object and the 
 Suppose the originating Jolie service has an operation `greet` that returns a string given a tree with subnode `name`, as follows.
 (Nanoservices are great for examples, not so much in production: do this at home!)
 
-```Jolie
+```jolie
 greet( request )( response ) {
 	response = "Hello " + request.name
 }
@@ -86,7 +86,7 @@ If you receive that in variable `x`, you can access the `"Hey"` in JavaScript as
 
 # Installation
 
-```
+```html
 <script type="text/javascript" src="https://cdn.rawgit.com/fmontesi/jo/master/lib/jo.js"></script>
 ```
 
