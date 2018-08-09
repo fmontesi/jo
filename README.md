@@ -96,5 +96,7 @@ Pull requests with better ways to distribute Jo are welcome.
 
 # Dependencies
 
-None. (I don't like dependencies.) Jo is based on [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which is natively supported by modern browsers.
+There are no dependencies on other libraries. 
+
+Jo is based on [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which is natively supported by modern browsers.
 If you want to use Jo with older browsers, use a [polyfill for fetch](https://github.com/github/fetch).
