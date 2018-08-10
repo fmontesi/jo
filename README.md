@@ -69,12 +69,6 @@ Jo("SubGateway1/SubGateway2/Greeter").greet( { name: "Homer" } )
 	.catch( JoHelp.parseError ).catch( console.log );
 ```
 
-## Handling basic values in nodes: response.$
-
-In JSON, an element can either be a basic value (e.g., strings, numbers), an object, or an array.
-In Jolie, there are no restrictions: an element is always a tree, and each node can contain _both_ a basic value and subnodes (similarly to markup languages).
-For example, this is valid Jolie: `"Homer" { .children[0] = "Bart", .children[1] = "Lisa" }`. It gives a tree containing the string `Homer` in its root node, which has an array subnode `children` with two elements. If you receive this tree using `Jo` in variable `response`, you can access the value contained in the root node (`"Homer"` in our example) by `response.$`.
-
 # Installation
 
 ```html
@@ -91,3 +85,11 @@ There are no dependencies on other libraries.
 
 Jo is based on [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which is natively supported by modern browsers.
 If you want to use Jo with older browsers, use a [polyfill for fetch](https://github.com/github/fetch).
+
+# FAQ
+
+## How do I handle basic values in root nodes sent by Jolie? (AKA response.$)
+
+In JSON, an element can either be a basic value (e.g., strings, numbers), an object, or an array.
+In Jolie, there are no restrictions: an element is always a tree, and each node can contain _both_ a basic value and subnodes (similarly to markup languages).
+For example, this is valid Jolie: `"Homer" { .children[0] = "Bart", .children[1] = "Lisa" }`. It gives a tree containing the string `Homer` in its root node, which has an array subnode `children` with two elements. If you receive this tree using `Jo` in variable `response`, you can access the value contained in the root node (`"Homer"` in our example) by `response.$`.
