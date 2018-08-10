@@ -81,12 +81,17 @@ Pull requests with better ways to distribute Jo are welcome.
 
 # Dependencies
 
-There are no dependencies on other libraries. 
+There are no dependencies on other libraries. However, Jo uses some recent features offered by web browsers.
 
-Jo is based on [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), which is natively supported by modern browsers.
-If you want to use Jo with older browsers, use a [polyfill for fetch](https://github.com/github/fetch).
+- Jo uses [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) to perform asynchronous calls. If you want to use Jo with older browsers, use a [polyfill for fetch](https://github.com/github/fetch). Check which browsers support fetch here: https://caniuse.com/#feat=fetch.
+
+- Jo uses some modern JavaScript features. [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) is used to implement the magic of calling the operations of your Jolie server as if they were native methods (`Jo.operation`). We also use [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Check which browsers support Proxy at https://caniuse.com/#feat=proxy, and which support arrow functions at https://caniuse.com/#feat=arrow-functions. If you want to use Jo in browsers that do not support these features, you can try compiling Jo with [Babel](https://babeljs.io/).
 
 # FAQ
+
+## What HTTP method are you using?
+
+POST is the default method. To change it, you can use the optional parameters. For example, to use GET: `Jo.operation( data, { method: 'GET' } )`.
 
 ## How do I handle basic values in root nodes sent by Jolie? (AKA response.$)
 
