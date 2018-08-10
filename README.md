@@ -6,7 +6,9 @@ Jo (pronounced "Yo!") is a JavaScript library for web pages to (asynchronously) 
 
 ## Invoking an operation from the server
 
-Syntax: `Jo.operation( data [, params] )` where `data` is a JSON object and the optional `params` are parameters for the underlying `fetch` operation (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+Syntax: `Jo.operation( data [, params] )` where
+- the `data` to be sent is a JSON object;
+- the optional `params` are parameters for the underlying `fetch` operation (https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API), for example in case you need to specify special headers.
 
 Suppose the originating Jolie service has an operation `greet` that returns a string given a tree with subnode `name`, as follows.
 (Nanoservices are great for examples, not so much in production: do this at home!)
@@ -22,7 +24,7 @@ You can invoke it with Jo as follows.
 ```javascript
 Jo.greet( { name: "Homer" } )
 	.then( response => console.log( response.$ ) ) // Jo uses promises
-	.catch( error => {	// an error occurred
+	.catch( error => {		// an error occurred
 		if ( error.isFault ) {	// It's an application error
 			console.log( JSON.stringify( error.fault ) );
 		} else { // It's a middleware error
@@ -38,7 +40,7 @@ Use `JoHelp.parseError` (pronounced "Yo! Help!") to get the error message, if it
 
 ```javascript
 Jo.greet( { name: "Homer" } )
-	.then( response => console.log( response.$ ) ) // Jo uses promises
+	.then( response => console.log( response.$ ) )
 	.catch( JoHelp.parseError ).catch( console.log );
 ```
 
@@ -55,11 +57,11 @@ If `GreeterService` has our operation `greet`, we can invoke it as follows.
 
 ```javascript
 Jo("Greeter").greet( { name: "Homer" } )
-	.then( response => console.log( response.$ ) ) // Jo uses promises
-	.catch( error => {	// an error occurred
+	.then( response => console.log( response.$ ) )
+	.catch( error => {		// an error occurred
 		if ( error.isFault ) {	// It's an application error
 			console.log( JSON.stringify( error.fault ) );
-		} else { // It's a middleware error
+		} else {		// It's a middleware error
 			console.log( error.message );
 		}
 	} );
@@ -69,11 +71,11 @@ If your API gateway points to another API gateway, you can nest them!
 
 ```javascript
 Jo("SubGateway1/SubGateway2/Greeter").greet( { name: "Homer" } )
-	.then( response => console.log( response.$ ) ) // Jo uses promises
-	.catch( error => {	// an error occurred
+	.then( response => console.log( response.$ ) )
+	.catch( error => {		// an error occurred
 		if ( error.isFault ) {	// It's an application error
 			console.log( JSON.stringify( error.fault ) );
-		} else { // It's a middleware error
+		} else { 		// It's a middleware error
 			console.log( error.message );
 		}
 	} );
