@@ -27,7 +27,7 @@ Jo.greet( { name: "Homer" } )
 	.catch( error => {		// an error occurred
 		if ( error.isFault ) {	// It's an application error
 			console.log( JSON.stringify( error.fault ) );
-		} else { // It's a middleware error
+		} else {		// It's a middleware error
 			console.log( error.message );
 		}
 	} );
