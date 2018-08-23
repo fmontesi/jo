@@ -1,8 +1,8 @@
 # Jo
 
-![Chuck Norris, Jo](https://fmontesi.github.io/assets/jo-demo-chuck/joke-workflow.png)
-
 Access web APIs as JavaScript objects.
+
+![Chuck Norris, Jo](https://fmontesi.github.io/assets/jo-demo-chuck/joke-workflow.png)
 
 Jo supports both verb-oriented APIs (e.g., `/getJoke?{id:1}`) and resource-oriented APIs (e.g., `/jokes/1`).
 You can use both interchangeably, which is particularly useful when you have to interact with microservices that adopt different API styles.
