@@ -1,6 +1,6 @@
 # Jo
 
-Access web APIs as JavaScript objects.
+Access web APIs as JavaScript objects. Jo (pronounced "Yo!") is a modest and thin library to write simpler client code.
 
 ![Chuck Norris, Jo](https://fmontesi.github.io/assets/jo-demo-chuck/joke-workflow.png)
 
@@ -9,7 +9,7 @@ You can use both interchangeably, which is particularly useful when you have to 
 
 Jo can be used with any web server. It uses JSON as data format (we plan on adding more formats in the future). It includes native support for [Jolie](https://www.jolie-lang.org/) API Gateways (AKA [Jolie redirections](https://jolielang.gitbook.io/docs/architectural-composition/redirection)).
 
-You can find a brief tutorial for building a web application with Jo here: [https://fmontesi.github.io/2018/08/16/jo.html](https://fmontesi.github.io/2018/08/16/jo.html).
+You can find a brief tutorial for building a microservice-based web application with Jo here: [https://fmontesi.github.io/2018/08/16/jo.html](https://fmontesi.github.io/2018/08/16/jo.html).
 
 # Usage: Verb-oriented APIs
 
@@ -140,10 +140,6 @@ There are no dependencies on other libraries. However, Jo uses some recent featu
 - Jo uses some modern JavaScript features. [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) is used to implement the magic of calling the operations of your Jolie server as if they were native methods (`Jo.operation`). We also use [Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions). Check which browsers support Proxy at https://caniuse.com/#feat=proxy, and which support arrow functions at https://caniuse.com/#feat=arrow-functions. If you want to use Jo in browsers that do not support these features, you can try compiling Jo with [Babel](https://babeljs.io/).
 
 # FAQ
-
-## How do I pronounce Jo?
-
-Jo is pronounced "Yo!".
 
 ## How do I handle basic values in root nodes sent by Jolie? (AKA response.$)
 
