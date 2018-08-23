@@ -105,7 +105,7 @@ If `resource` has a name that cannot be written in JavaScript, you can use the a
 
 Suppose the web server offers a resource `/jokes`, and you want to get all of them.
 
-```
+```javascript
 Jor.jokes.get()
 	.then( response => /* handle all the jokes */ )
 	.catch( JoHelp.parseError ).catch( console.log );
@@ -115,7 +115,7 @@ Jor.jokes.get()
 
 Redirections are supported by `Jor` just as for verb-based APIs. Suppose the server offers the `/jokes` resource through the subservice `ChuckNorris`. Then we can access it as follows.
 
-```
+```javascript
 Jor("ChuckNorris").jokes.get()
 	.then( response => /* handle all the jokes */ )
 	.catch( JoHelp.parseError ).catch( console.log );
