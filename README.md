@@ -124,10 +124,10 @@ Jor("ChuckNorris").jokes.get()
 # Installation
 
 ```html
-<script type="text/javascript" src="https://cdn.rawgit.com/fmontesi/jo/master/lib/jo.js"></script>
+<script type="text/javascript" src="https://raw.githubusercontent.com/fmontesi/jo/master/lib/jo.js"></script>
 ```
 
-Or, download Jo (https://cdn.rawgit.com/fmontesi/jo/master/lib/jo.js) and use it locally.
+Or, download Jo (https://raw.githubusercontent.com/fmontesi/jo/master/lib/jo.js) and use it locally.
 
 Pull requests with better ways to distribute Jo are welcome.
 
