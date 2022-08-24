@@ -5,9 +5,9 @@ Access web APIs as JavaScript objects. Jo (pronounced "Yo!") is a modest and thi
 ![Chuck Norris, Jo](https://fmontesi.github.io/assets/jo-demo-chuck/joke-workflow.png)
 
 Jo supports both verb-oriented APIs (e.g., `/getJoke?{id:1}`) and resource-oriented APIs (e.g., `/jokes/1`).
-You can use both interchangeably, which is particularly useful when you have to interact with microservices that adopt different API styles.
+You can use both interchangeably, which is useful when you have to interact with microservices that adopt different API styles.
 
-Jo can be used with any web server. It uses JSON as data format (we plan on adding more formats in the future). It includes native support for [Jolie](https://www.jolie-lang.org/) API Gateways (AKA [Jolie redirections](https://jolielang.gitbook.io/docs/architectural-composition/redirection)).
+Jo can be used with any web server. It uses JSON as data format (more formats could be added in the future). It includes native support for [Jolie](https://www.jolie-lang.org/) API Gateways (aka [Jolie redirections](https://jolielang.gitbook.io/docs/architectural-composition/redirection)).
 
 You can find a brief tutorial for building a microservice-based web application with Jo here: [https://fmontesi.github.io/2018/08/16/jo.html](https://fmontesi.github.io/2018/08/16/jo.html).
 
