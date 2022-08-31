@@ -6,8 +6,6 @@ jo.Jo("ChuckNorris").search({ query: "Computer" })
         // api.chucknorris.io returns jokes in a "result" array subelement
         if (response.result) {
             for (const joke of response.result) {
-                console.log(response.result)
-                console.log(joke)
                 const li = document.createElement("li")
                 const text = document.createTextNode(joke.value)
                 li.appendChild(text)
