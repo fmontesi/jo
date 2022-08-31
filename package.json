@@ -1,36 +1,29 @@
 {
-  "name": "@jolie/jo",
-  "version": "1.0.0",
-  "description": "A thin JavaScript library for accessing microservice APIs",
-  "main": "jo.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fmontesi/jo.git"
-  },
-  "keywords": [
-    "jolie",
-    "microservices",
-    "jo",
-    "rest"
-  ],
-  "author": {
-    "name": "Fabrizio Montesi",
-    "email": "famontesi@gmail.com",
-    "url": "https://www.fabriziomontesi.com"
-  },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/fmontesi/jo/issues"
-  },
-  "homepage": "https://github.com/fmontesi/jo#readme",
-  "jolie": {
-    "dependencies": {},
-    "maven": {
-      "dependencies": {},
-      "indirectDependencies": {}
-    }
-  }
+	"name": "@jolie/jo",
+	"version": "1.0.0",
+	"description": "A thin JavaScript library for accessing microservice APIs",
+	"main": "jo.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fmontesi/jo.git"
+	},
+	"keywords": [
+		"jolie",
+		"microservices",
+		"jo",
+		"rest"
+	],
+	"author": {
+		"name": "Fabrizio Montesi",
+		"email": "famontesi@gmail.com",
+		"url": "https://www.fabriziomontesi.com"
+	},
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/fmontesi/jo/issues"
+	},
+	"homepage": "https://github.com/fmontesi/jo#readme"
 }
