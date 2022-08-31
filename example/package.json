@@ -1,0 +1,27 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.ol",
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "repo": "",
+  "keywords": [],
+  "author": "nau",
+  "license": "ISC",
+  "scripts": {
+    "watch": "nodemon jolie main.ol",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "jolie": {
+    "dependencies": {
+      "@jolie/leonardo": "0.4.1"
+    },
+    "maven": {
+      "dependencies": {},
+      "indirectDependencies": {}
+    }
+  }
+}
