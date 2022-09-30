@@ -9,7 +9,11 @@ You can use both interchangeably, which is useful when you have to interact with
 
 Jo can be used with any web server. It uses JSON as data format (more formats could be added in the future). It includes native support for [Jolie](https://www.jolie-lang.org/) API Gateways (aka [Jolie redirections](https://jolielang.gitbook.io/docs/architectural-composition/redirection)).
 
-You can find a brief tutorial for building a microservice-based web application with Jo here: [https://fmontesi.github.io/2018/08/16/jo.html](https://fmontesi.github.io/2018/08/16/jo.html).
+# Installation
+
+```
+npm i @jolie/jo
+```
 
 # Usage: Verb-oriented APIs
 
@@ -34,6 +38,8 @@ Suppose the originating web server offers an operation `greet` that returns a st
 You can invoke it as follows.
 
 ```javascript
+import {Jo} from '@jolie/jo'
+
 Jo.greet( { name: "Homer" } )
 	.then( response => console.log( response.greeting ) ) // Jo uses promises
 	.catch( error => {		// an error occurred
@@ -106,6 +112,8 @@ If `resource` has a name that cannot be written in JavaScript, you can use the a
 Suppose the web server offers a resource `/jokes`, and you want to get all of them.
 
 ```javascript
+import {Jor} from '@jolie/jo'
+
 Jor.jokes.get()
 	.then( response => /* handle all the jokes */ )
 	.catch( JoHelp.parseError ).catch( console.log );
