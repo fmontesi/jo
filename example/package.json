@@ -9,7 +9,8 @@
   "author": "nau",
   "license": "ISC",
   "scripts": {
-    "watch": "nodemon jolie main.ol",
+    "watch": "nodemon --ignore 'web' -e js --signal SIGINT --exec 'npm run build && npm run start-jolie'",
+    "start-jolie": "jolie main.ol",
     "build": "webpack"
   },
   "devDependencies": {

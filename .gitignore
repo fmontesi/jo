@@ -132,3 +132,4 @@ dist
 # jolie related field
 packages/
 lib/
+example/web/js/bundle.js
