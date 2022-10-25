@@ -2,6 +2,8 @@ from protocols.http import DefaultOperationHttpRequest
 from console import Console
 from string-utils import StringUtils
 from @jolie.leonardo import WebFiles
+from .backend import Backend
+
 
 /// Operations offered through the web interface
 interface WebInterface {
@@ -16,6 +18,7 @@ service Main {
 	embed Console as console
 	embed WebFiles as webFiles
 	embed StringUtils as stringUtils
+	embed Backend as backend
 
 	// Output port to contact api.chucknorris.io
 	outputPort Chuck {
@@ -39,6 +42,7 @@ service Main {
 		}
 		Redirects:
 			ChuckNorris => Chuck
+		aggregates: backend
 		interfaces: WebInterface
 	}
 
