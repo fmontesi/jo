@@ -161,14 +161,12 @@ export const Jo = new Proxy(proxyBuilder, {
 
 export const Jor = new Proxy(resourceProxyBuilder, {
   get: (target, prop, receiver) => {
-    return (data: Object, params: any) => {
-      const buildFetch: FetchBuilder = (data, params, method) => {
-        const fetchParams = initParams(data, params);
-        fetchParams.method = method;
-        return jolieFetch(prop.toString(), fetchParams);
-      };
-      return buildHttpVerbs(buildFetch);
+    const buildFetch: FetchBuilder = (data, params, method) => {
+      const fetchParams = initParams(data, params);
+      fetchParams.method = method;
+      return jolieFetch(prop.toString(), fetchParams);
     };
+    return buildHttpVerbs(buildFetch);
   },
 });
 
